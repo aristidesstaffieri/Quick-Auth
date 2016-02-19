@@ -4,7 +4,6 @@ import { SIGNUP_FORM_FIELDS } from '../actions/actions.js'
 
 class Form extends Component {
   render() {
-		console.log(this.props)
     const {
       fields: { username, password },
       handleSubmit,

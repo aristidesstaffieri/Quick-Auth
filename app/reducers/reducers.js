@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import {reducer as formReducer} from 'redux-form'
-import { routeReducer, pushPath } from 'redux-simple-router'
+import { routeReducer } from 'react-router-redux'
 import { createNewUser } from './users/reducers'
 import { AUTHENTICATION_STATE, ERROR } from '../actions/actions.js'
 

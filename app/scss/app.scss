@@ -9,6 +9,12 @@
 	flex-direction: column;
 }
 
+.home-container {
+	h1 {
+		padding-right: 5%;
+	}
+}
+
 .signup-container, .login-container, .home-container {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -23,6 +29,7 @@
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
+	flex-direction: column;
 
 	.form-container {
 		-webkit-box-flex: 0;

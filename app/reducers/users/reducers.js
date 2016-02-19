@@ -10,7 +10,7 @@ const DEFAULT_USER_STATE = {
 export function createNewUser(state = DEFAULT_USER_STATE, action) {
   switch (action.type) {
     case AUTHENTICATED:
-			return Object.assign({}, state, {authenticated: true, name: action.user.username})
+			return Object.assign({}, state, {authenticated: true, name: action.name})
     case UNAUTHENTICATED:
       return Object.assign({}, state, {authenticated: false, name: ''})
     default:

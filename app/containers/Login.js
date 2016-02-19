@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
 import { createSelector } from 'reselect'
 import {
-	loginUser,
+	logInUser,
 	submitForm,
 	resetForm,
 	SIGNUP_FORM_FIELDS, SUBMITTING
@@ -23,10 +23,11 @@ class LoginContainer extends Component {
         <Form
         fields={SIGNUP_FORM_FIELDS}
         resetForm={ field => dispatch(resetForm(field)) }
-        onSubmit={ fields => dispatch(loginUser(fields)) }
+        onSubmit={ fields => dispatch(logInUser(fields)) }
 				formType={'LOGIN'} />
-
-			{ error ? error.message : null }
+				<div className="error">
+					<h3>{ error ? error.message : null }</h3>
+				</div>
       </div>
     )
   }

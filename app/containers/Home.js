@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { createSelector } from 'reselect'
 
-import { checkAuthState, logOutUser } from '../actions/actions.js'
+import { logOutUser } from '../actions/actions.js'
 
 class Home extends Component {
 
@@ -18,7 +18,7 @@ class Home extends Component {
     const { dispatch, user } = this.props
     return (
       <div className="home-container">
-        { user.name }
+        <h1>{ user.name }</h1>
       	<button onClick={this.logOutHandler.bind(this)}>Log Out</button>
       </div>
     )
@@ -26,7 +26,7 @@ class Home extends Component {
 }
 
 Home.propTypes = {
-  user: PropTypes.string.isRequired
+  user: PropTypes.object.isRequired
 }
 
 const user = state => state.user
