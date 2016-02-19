@@ -8,20 +8,21 @@ class Form extends Component {
     const {
       fields: { username, password },
       handleSubmit,
-      resetForm
+      resetForm,
+			formType
     } = this.props
     return (
-      <div className="signup-container">
+      <div className="form-container">
         <form onSubmit={ handleSubmit }>
-          <div className="signup-username">
+          <div className="form-username">
             <input placeholder="Username" { ...username }/>
           </div>
-          <div className="signup-password">
+          <div className="form-password">
             <input placeholder="Password" { ...password }/>
           </div>
-          <div className="signup-buttons">
+          <div className="form-buttons">
           <button onClick={ handleSubmit }>
-						{ this.props.formType === 'SIGN_UP' ? 'Sign Up' : 'Login' }
+						{ formType === 'SIGN_UP' ? 'Sign Up' : 'Login' }
           </button>
           </div>
         </form>

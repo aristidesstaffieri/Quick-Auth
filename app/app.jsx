@@ -9,7 +9,6 @@ import { createStore, compose, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { Router, Route, IndexRoute, BrowserHistory, hashHistory } from 'react-router'
 import { persistState } from 'redux-devtools'
-import { syncReduxAndRouter, routeReducer } from 'redux-simple-router'
 import Home from './containers/Home'
 import Login from './containers/Login'
 import SignUp from './containers/SignUp'
@@ -26,7 +25,7 @@ let store = finalCreateStore(reducer)
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="base-container">
         {this.props.children}
       </div>
     )
@@ -46,7 +45,7 @@ let routes = {
 
 ReactDOM.render((
   <Provider store={store}>
-    <div>
+    <div className="app-wrapper">
       <Router routes={routes} history={hashHistory} />
       <DevTools />
     </div>

@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     const { dispatch, user, error } = this.props
     return (
-      <div>
+      <div className="signup-container">
         <Form
         fields={ SIGNUP_FORM_FIELDS }
         resetForm={ field => dispatch(resetForm(field)) }

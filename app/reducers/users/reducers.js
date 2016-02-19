@@ -1,4 +1,4 @@
-import { AUTHENTICATION_STATE, SUBMITTING, NOT_SUBMITTING, ERROR } from '../../actions/actions.js'
+import { AUTHENTICATION_STATE, ERROR } from '../../actions/actions.js'
 
 const { UNAUTHENTICATED, AUTHENTICATED } = AUTHENTICATION_STATE
 

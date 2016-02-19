@@ -17,7 +17,7 @@ class Home extends Component {
   render() {
     const { dispatch, user } = this.props
     return (
-      <div>
+      <div className="home-container">
         { user.name }
       	<button onClick={this.logOutHandler.bind(this)}>Log Out</button>
       </div>

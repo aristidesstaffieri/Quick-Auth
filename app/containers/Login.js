@@ -19,7 +19,7 @@ class LoginContainer extends Component {
   render() {
     const { dispatch, user, submitting, error } = this.props
     return (
-      <div>
+      <div className="login-container">
         <Form
         fields={SIGNUP_FORM_FIELDS}
         resetForm={ field => dispatch(resetForm(field)) }
